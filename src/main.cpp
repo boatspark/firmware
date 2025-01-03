@@ -14,7 +14,6 @@ SYSTEM_MODE(SEMI_AUTOMATIC);
 BeaconScanner scanner;
 GPS gps;
 GPIOmonitor gpio;
-static const char* firmwareVersion = FIRMWARE_VERSION;
 
 const char* prepareReport();
 const char* prepareAlert(uint8_t alert);
@@ -93,7 +92,7 @@ const char* terminateJson(JSONBufferWriter& json) {
 const char* prepareReport() {
     JSONBufferWriter json(jsonbuf, sizeof(jsonbuf) - 1);
     json.beginObject();
-    json.name("v").value(firmwareVersion);
+    json.name("v").value(FIRMWARE_VERSION);
     scanner.toJSON(&json);
     gps.toJSON(&json);
     gpio.toJSON(&json);
