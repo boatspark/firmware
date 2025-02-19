@@ -3,15 +3,15 @@
 #include "GPIO.h"
 
 // (10K/2.7K) voltage divider
-#define PIN_ADC_BAT1 A4
-#define PIN_ADC_BAT2 A3
+#define PIN_ADC_BAT1 A0
+#define PIN_ADC_BAT2 A1
 
 // D6 = Shore Power - needs PULLUP, will go to ground when power is on.
-#define PIN_SHOREPOWER D6
+#define PIN_SHOREPOWER D2
 // D8 = Bilge Pump (10K/2.7K) = HIGH means pump on
-#define PIN_BILGEPUMP D8
+#define PIN_BILGEPUMP D4
 // D7 = Engine (10K/2.7K) = HIGH means engine running
-#define PIN_ENGINE D7
+#define PIN_ENGINE D5
 
 // Milliseconds for the debounce function
 #define DEBOUNCE_INTERVAL 100
