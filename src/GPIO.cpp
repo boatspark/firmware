@@ -6,12 +6,12 @@
 #define PIN_ADC_BAT1 A0
 #define PIN_ADC_BAT2 A1
 
-// D6 = Shore Power - needs PULLUP, will go to ground when power is on.
+// D2 = Shore Power - needs PULLUP, will go to ground when power is on.
 #define PIN_SHOREPOWER D2
-// D8 = Bilge Pump (10K/2.7K) = HIGH means pump on
-#define PIN_BILGEPUMP D4
-// D7 = Engine (10K/2.7K) = HIGH means engine running
-#define PIN_ENGINE D5
+// D5 = Bilge Pump (10K/2.7K) = HIGH means pump on
+#define PIN_BILGEPUMP D5
+// D6 = Engine (10K/2.7K) = HIGH means engine running
+#define PIN_ENGINE D6
 
 // Milliseconds for the debounce function
 #define DEBOUNCE_INTERVAL 100
